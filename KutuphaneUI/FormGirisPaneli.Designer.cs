@@ -48,6 +48,7 @@ namespace KutuphaneUI.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.labelSifremiUnuttum = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkBoxBeniHatirla = new System.Windows.Forms.CheckBox();
             this.panelFormGirisPanelGorunum.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFormGirisPanelLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderKullaniciGirisi)).BeginInit();
@@ -161,7 +162,7 @@ namespace KutuphaneUI.Forms
             this.labelGirisDurumu.AutoSize = true;
             this.labelGirisDurumu.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelGirisDurumu.ForeColor = System.Drawing.Color.Red;
-            this.labelGirisDurumu.Location = new System.Drawing.Point(43, 512);
+            this.labelGirisDurumu.Location = new System.Drawing.Point(43, 505);
             this.labelGirisDurumu.Name = "labelGirisDurumu";
             this.labelGirisDurumu.Size = new System.Drawing.Size(0, 16);
             this.labelGirisDurumu.TabIndex = 16;
@@ -251,6 +252,18 @@ namespace KutuphaneUI.Forms
             this.label4.TabIndex = 19;
             this.label4.Text = "Şifremi";
             // 
+            // checkBoxBeniHatirla
+            // 
+            this.checkBoxBeniHatirla.AutoSize = true;
+            this.checkBoxBeniHatirla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxBeniHatirla.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.checkBoxBeniHatirla.Location = new System.Drawing.Point(43, 525);
+            this.checkBoxBeniHatirla.Name = "checkBoxBeniHatirla";
+            this.checkBoxBeniHatirla.Size = new System.Drawing.Size(104, 21);
+            this.checkBoxBeniHatirla.TabIndex = 20;
+            this.checkBoxBeniHatirla.Text = "BENİ HATIRLA";
+            this.checkBoxBeniHatirla.UseVisualStyleBackColor = true;
+            // 
             // FormGirisPaneli
             // 
             this.AcceptButton = this.ButtonFormGirisPanelGiris;
@@ -260,6 +273,7 @@ namespace KutuphaneUI.Forms
             this.CancelButton = this.ButtonFormGirisPanelCikis;
             this.ClientSize = new System.Drawing.Size(365, 709);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBoxBeniHatirla);
             this.Controls.Add(this.labelSifremiUnuttum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -309,5 +323,6 @@ namespace KutuphaneUI.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelSifremiUnuttum;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox checkBoxBeniHatirla;
     }
 }

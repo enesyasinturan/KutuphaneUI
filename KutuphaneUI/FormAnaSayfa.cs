@@ -196,17 +196,23 @@ namespace KutuphaneUI
 
         private void ButtonAnaSayfaSolMenuKullanicilar_Click(object sender, EventArgs e)
         {
-            panelAnaSayfaAnaMenu.Controls.Clear();
-            labelTitle.Text = "KULLANICILAR";
+            if (FormGirisPaneli.yetki == 1)
+            {
+                panelAnaSayfaAnaMenu.Controls.Clear();
+                labelTitle.Text = "KULLANICILAR";
 
 
-            Kullanicilar KullanicilarNesnesi = new Kullanicilar();
-            KullanicilarNesnesi.TopLevel = false;
-            KullanicilarNesnesi.AutoScroll = true;
-            panelAnaSayfaAnaMenu.Controls.Add(KullanicilarNesnesi);
-            KullanicilarNesnesi.Show();
+                Kullanicilar KullanicilarNesnesi = new Kullanicilar();
+                KullanicilarNesnesi.TopLevel = false;
+                KullanicilarNesnesi.AutoScroll = true;
+                panelAnaSayfaAnaMenu.Controls.Add(KullanicilarNesnesi);
+                KullanicilarNesnesi.Show();
 
-            ButtonSelectedColor(ButtonAnaSayfaSolMenuKullanicilar);
+                ButtonSelectedColor(ButtonAnaSayfaSolMenuKullanicilar);
+            }
+
+            else
+                MessageBox.Show("Bu paneli açmak için yönetici yetkiniz olmalıdır.", "Giriş İzin Hatası");
         }
 
         private void ButtonAnaSayfaSolMenuGeriBildirim_Click(object sender, EventArgs e)

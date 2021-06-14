@@ -166,6 +166,7 @@
     <EmbeddedResource Include="SifremiUnuttumPaneli.resx">
       <DependentUpon>SifremiUnuttumPaneli.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

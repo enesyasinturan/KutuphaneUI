@@ -30,6 +30,8 @@ namespace KutuphaneUI.Forms
         private void FormGirisPaneli_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            textBoxFormGirisPanelKullaniciAdi.Text = Properties.Settings.Default.hatirlanacakMetin;
+            checkBoxBeniHatirla.Checked = Properties.Settings.Default.beniHatirla;
         }
 
         //BORDER CORNERS
@@ -103,6 +105,23 @@ namespace KutuphaneUI.Forms
                     komut.Parameters.AddWithValue("sonGorulme", sonGorulme);
                     komut.ExecuteNonQuery();
                     baglanti.Close();
+
+                    if (checkBoxBeniHatirla.Checked)
+                    {
+                        Properties.Settings.Default.hatirlanacakMetin = textBoxFormGirisPanelKullaniciAdi.Text;
+                        Properties.Settings.Default.beniHatirla = true;
+                        Properties.Settings.Default.Save();
+                    }
+
+                    else if(checkBoxBeniHatirla.Checked == false)
+                    {
+                        Properties.Settings.Default.hatirlanacakMetin = "";
+                        Properties.Settings.Default.beniHatirla = false;
+                        Properties.Settings.Default.Save();
+                    }
+                        
+                    
+
 
                     FormAnaSayfa kutuphaneAnasayfaNesnesi = new FormAnaSayfa();
                     kutuphaneAnasayfaNesnesi.Show();
